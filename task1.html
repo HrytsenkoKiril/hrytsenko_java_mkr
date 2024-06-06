@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find Middle Character</title>
+    <script>
+        function findMiddleCharacter() {
+            const userInput = prompt("Please enter a word:");
+
+
+            if (userInput === null) {
+                alert("Canceled.");
+                return;
+            }
+
+            const trimmedInput = userInput.trim();
+
+        
+            if (trimmedInput === "") {
+                alert("Invalid value");
+                return;
+            }
+
+            const length = trimmedInput.length;
+            const middleIndex = Math.floor(length / 2);
+
+            let result;
+            if (length % 2 === 0) {
+                result = trimmedInput[middleIndex - 1] + trimmedInput[middleIndex];
+            } else {
+                result = trimmedInput[middleIndex];
+            }
+
+            alert(result);
+        }
+
+        window.onload = function() {
+            findMiddleCharacter();
+        }
+    </script>
+</head>
+<body>
+    <h1>Перезагрузіть сторінку, щоб спробувати ще раз</h1>
+</body>
+</html>
