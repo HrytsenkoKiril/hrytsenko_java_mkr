@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task4</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+            margin: 0;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            cursor: pointer;
+            padding: 8px;
+            background-color: #fff;
+            margin: 4px 0;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+        li:hover {
+            background-color: #e0e0e0;
+        }
+    </style>
+</head>
+<body>
+
+<ul id="user-list">
+    </ul>
+
+     <script>
+        const users = [
+            "Гриценко Кіріл",
+            "Гончаренко Інна",
+            "Іван Ревенко",
+            "Селезнзьов Іван",
+            "Авраменко Євген",
+            "Скульська Влада",
+            "Бураков Даниїл",
+            "Бистрик Марія",
+            "Бузов Максим",
+            "Семенюк Сергій"
+        ];
+
+        const userList = document.getElementById('user-list');
+
+        users.forEach(name => {
+            const listItem = document.createElement('li');
+            listItem.textContent = name;
+            listItem.addEventListener('click', () => {
+                alert(`Hello, ${name}`);
+            });
+            userList.appendChild(listItem);
+        });
+    </script>
+
+</body>
+</html>
